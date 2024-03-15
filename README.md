@@ -1,14 +1,13 @@
 # EZProxyWorkers
 A Proxy for OpenAI API on Cloudflare Workers
 
-Copy The code and implement the API_KEYs
+Copy The code and implement the NEW_API_KEYs
 ```javascript
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });
 
 const OPENAI_API_URL = 'https://api.openai.com/v1';
-const NEW_API_KEY = 'YOUR_NEW_API_KEY';
 
 async function handleRequest(request) {
   // Handle CORS preflight request
@@ -28,7 +27,6 @@ async function handleRequest(request) {
 
   // Create a new request with the necessary headers
   let newHeaders = new Headers();
-  newHeaders.set('Authorization', `Bearer ${NEW_API_KEY}`);
 
   // List of headers to copy from the original request
   const headersToCopy = ['content-Type', 'openai-beta'];
