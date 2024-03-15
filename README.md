@@ -1,7 +1,7 @@
 # EZProxyWorkers
-A Proxy for OpenAI API on Cloudflare Workers
+A Proxy for OpenAI API on Cloudflare Workers.
 
-Copy The code and implement the NEW_API_KEYs
+Copy The code to your Cloudflare Workers.
 ```javascript
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
