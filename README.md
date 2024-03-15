@@ -2,7 +2,7 @@
 A Proxy for OpenAI API on Cloudflare Workers
 
 Copy The code and implement the API_KEYs
-```
+```javascript
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });
